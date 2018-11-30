@@ -60,7 +60,7 @@ export default {
   align-items: center;
   height: 50px;
   line-height: 50px;
-  background: #473c8b;
+  background: #29d;
   color: #fdfdfd;
   text-align: center;
   font-size: 20px;
@@ -70,7 +70,7 @@ export default {
 }
 .logo_title {
   padding: 0 0.3rem 0 0;
-  color: #42b983;
+  color: #ecf5ff;
   font-size: 18px;
   &.is-bold {
     font-weight: 700;
