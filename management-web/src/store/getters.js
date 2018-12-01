@@ -19,6 +19,8 @@ const getters = {
   // 菜单路由，显示在页面上的
   menu_routers: state => state.permission.routers,
   // 当前用户的 动态菜单路由
-  dynamicRouters: state => state.permission.dynamicRouters
+  dynamicRouters: state => state.permission.dynamicRouters,
+  visitedViews: state => state.tagsView.visitedViews,
+  cachedViews: state => state.tagsView.cachedViews
 }
 export default getters
