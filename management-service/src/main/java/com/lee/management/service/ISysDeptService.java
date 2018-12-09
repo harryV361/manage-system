@@ -3,6 +3,9 @@ package com.lee.management.service;
 
 import com.lee.management.common.service.IBaseService;
 import com.lee.management.entity.SysDept;
+import com.lee.management.vo.TreeVo;
+
+import java.util.Set;
 
 /**
  * <p>
@@ -14,5 +17,7 @@ import com.lee.management.entity.SysDept;
  */
 
 public interface ISysDeptService extends IBaseService<SysDept, Integer> {
+
+    Set<TreeVo> selectAllDepts();
 
 }

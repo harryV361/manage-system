@@ -3,6 +3,8 @@ package com.lee.management.common.service;
 import com.github.pagehelper.PageInfo;
 import com.lee.management.vo.MyPage;
 
+import java.util.List;
+
 
 /**
  * @author: Wang Chen Chen
@@ -22,6 +24,8 @@ public interface IBaseService<T, ID> {
     T selectByPrimaryKey(ID id);
 
     PageInfo<T> selectList(MyPage page);
+
+    List selectList();
 
     int updateByPrimaryKeySelective(T record);
 

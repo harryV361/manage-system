@@ -9,6 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 
 /**
  * @author: Wang Chen Chen
@@ -50,6 +52,11 @@ public class BaseServiceImpl<T, ID, M extends BaseMapper> implements IBaseServic
     public PageInfo<T> selectList(MyPage page) {
         log.info("selectList....... PageNum: {}  PageSize:{}", page.getPageNum(), page.getPageSize());
         return PageHelper.startPage(page.getPageNum(), page.getPageSize()).doSelectPageInfo(() -> baseMapper.selectList());
+    }
+
+    @Override
+    public List selectList() {
+        return baseMapper.selectList();
     }
 
     @Transactional(rollbackFor = RuntimeException.class)

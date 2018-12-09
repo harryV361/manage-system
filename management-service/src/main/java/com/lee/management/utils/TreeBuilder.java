@@ -1,9 +1,8 @@
 package com.lee.management.utils;
 
 
-import com.lee.management.entity.SysUser;
+import com.google.gson.Gson;
 import com.lee.management.vo.MenuVo;
-import org.apache.commons.collections.CollectionUtils;
 
 import java.util.*;
 
@@ -29,6 +28,8 @@ public class TreeBuilder {
         });
         return root;
     }
+
+
 
 
     /**
@@ -67,8 +68,14 @@ public class TreeBuilder {
         ));
 
         for (MenuVo menuVo : findRoots(set)) {
-            System.out.println(menuVo);
+//            System.out.println(menuVo);
+//            System.out.println("========");
+//            System.out.println(new Gson().toJson(menuVo));
+//            System.out.println("========");
         }
+
+
+        System.out.println(new Gson().toJson(findRoots(set)));
 
     }
 
